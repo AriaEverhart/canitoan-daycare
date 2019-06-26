@@ -1,31 +1,24 @@
+<?php include('session.php'); ?>
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html">Canitoan Daycare</a>
+			<a class="navbar-brand" href="homepage.php">Canitoan Daycare</a>
 		</div>
 		<ul class="nav navbar-nav">
 			<li>
-				<a href="ListAttendance.html">Attendance</a>
+				<a href="ListDates.php">Attendance</a>
 			</li>
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown">Students<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="ListStudents.html">Student List</a>
-					</li>
-					<li>
-						<a href="AddStudents.html">Enroll New Student</a>
-					</li>
-				</ul>
+			<li>
+				<a href="ListStudents.php">Students</a>
 			</li>
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown">Inventory<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="ListInventory.html">Current Inventory</a>
+						<a href="ListInventory.php">Current Inventory</a>
 					</li>
 					<li>
-						<a href="ListReimbursedInventory.html">Reimbursed Inventory</a>
+						<a href="ListReimbursedInventory.php">Reimbursed Inventory</a>
 					</li>
 				</ul>
 			</li>
@@ -33,11 +26,11 @@
 		<ul class="nav navbar-nav navbar-right">
 			<li>
 				<a href="#">
-					<span class="glyphicon glyphicon-user"></span> USERNAME HERE
+					<span class="glyphicon glyphicon-user"></span> <?php echo $login_session; ?>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="index.php">
 					<span class="glyphicon glyphicon-log-out"></span> Log Out
 				</a>
 			</li>
